@@ -5,36 +5,34 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Roboto' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <script src="js/controllers.js"></script>
-        <link href="css/styley.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styley.min.css" rel="stylesheet" type="text/css"/>
         <title>Angular Working</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="main" ng-controller="MyController">
+            <div class="search">
+                <h1>9 Love to Hate GoT Chars</h1>
+                <label>Search: </label>
+                <input ng-model="query" placeholder="Search for Character" autofocus>
 
-        <div class="search">
-            <h1>9 Love to Hate GoT Chars</h1>
-            <label>Search: </label>
-            <input ng-model="query" placeholder="Search for Character" autofocus>
-    
-    <label class="formgroup">By:
-        <select ng-model="characterOrder">
-            <option value="name">Name</option>
-            <option value="quote">Quote</option>
-        </select>
-    </label>
-            <label class="formgroup">
-                <input type="radio" ng-model="direction" name="direction" checked>Ascending
+                <label class="formgroup">By:
+                    <select ng-model="characterOrder">
+                        <option value="name">Name</option>
+                        <option value="quote">Quote</option>
+                    </select>
                 </label>
                 <label class="formgroup">
-                <input type="radio" ng-model="direction" name="direction" value="reverse">
-                Descending
-                </label>               
-            
-        </div>
+                    <input type="radio" ng-model="direction" name="direction" checked>Ascending
+                </label>
+                <label class="formgroup">
+                    <input type="radio" ng-model="direction" name="direction" value="reverse">
+                    Descending
+                </label>     
+            </div>
             <ul class="characterlist">
-                <li class="character cf" ng-repeat="item in characters | filter: query | orderBy: characterOrder:direction">
+                <li class="character cf" ng-repeat="item in characters| filter: query | orderBy: characterOrder:direction">
                     <img ng-src="images/{{item.shortname}}_tn.png" alt="Photo of {{item.name}}">               
                     <div class="info">
                         <h2>{{item.name}}</h2>
