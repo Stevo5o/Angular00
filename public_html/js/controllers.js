@@ -1,75 +1,19 @@
 /**
- * controllers.js 
+ * controllers.js
  * @ Stephen O'Connor, March 2015
- * 
- * Dependencies: 
- * Angular 
- * 
+ *
+ * Dependencies:
+ * Angular
+ *
  */
 
 // immediately invoked anonymous function
-( function () {
-	var myApp = angular.module('myApp', []);
+(function () {
+    var myApp = angular.module('myApp', []);
 
-myApp.controller('MyController',         function MyController($scope) {
-            $scope.characters = [
-  {
-    "name":" Theon Greyjoy",
-    "shortname":" Theon_Greyjoy",
-    "quote":"\"We Do Not Sow.\"",
-    "bio":"Theon is the youngest son of Lord Balon and Lady Alannys Greyjoy. Balon is the head of House Greyjoy and Lord of the Iron Islands. The Iron Islands are one of the constituent regions of the Seven Kingdoms and House Greyjoy is one of the Great Houses of the realm. House Greyjoy rule the region from their seat at Pyke and Balon also holds the title Lord Reaper of Pyke."
-  },
-  {
-    "name":"Gregor \"The Mountain\" Clegane",
-    "shortname":"Gregor_Clegane",
-    "quote":"\"Elia Martell! I killed her children. Then I raped her. Then I smashed her head in. Like this!\"",
-    "bio":"Ser Gregor Clegane is the head of House Clegane, a knightly house from the Westerlands, and the elder brother of Sandor Clegane. When Sandor and Gregor were children Gregor held his brother's face in a fire for using his toys without permission, horrifically scarring him. Gregor is a landed knight rather than a full lord. Gregor is freakishly huge, said to be the largest man in Westeros, almost eight feet in height and heavily muscled. For this reason he is called \"The Mountain That Rides\" or, simply, \"The Mountain\". He is feared throughout Westeros with a reputation for ferocity and anger. He is a loyal retainer and servant of House Lannister, particularly to Lord Tywin."
-  },
-  {
-    "name":"Jaime Lannister",
-    "shortname":"Jaime_Lannister",
-    "quote":"\"A Lannister always pays his debts\"",
-    "bio":"Jaime Lannister is a major character in the first, second, third, fourth and fifth seasons. He is played by starring cast member Nikolaj Coster-Waldau and debuts in the series premiere. Ser Jaime Lannister is a knight of the Kingsguard, the son of Tywin Lannister, twin brother of Queen Cersei Lannister, and older brother of Tyrion Lannister. Previously he served in the Kingsguard of Aerys II Targaryen and, infamously, he betrayed and killed Aerys during the Sack of King's Landing, earning him the sobriquet \"The Kingslayer\". Jaime is involved in an incestuous sexual relationship with Cersei, and, unknown to most, is the biological father of her three children, Joffrey, Myrcella and Tommen."
-  },
-  {
-    "name":"Melisandre",
-    "shortname":"Melisandre",
-    "quote":"\"The night is dark and full of terrors...but the fire burns them all away.\"",
-    "bio":"Originally born a slave in Essos, Melisandre is a Red Priestess of the Lord of Light, a deity that is not widely worshiped in Westeros. Hailing from Asshai, a country located in the far east of the continent of Essos, she claims to wield powerful magical abilities, particularly the power of prophecy. Melisandre wears a large ruby necklace that seems to glow whenever she performs her magic. Some years ago she crossed the Narrow Sea and came to the court of Lord Stannis Baratheon on the island stronghold of Dragonstone, to preach her faith. Stannis and the majority of his household have now converted to her religion, and she has become a close adviser to Stannis himself."
-  },
-  {
-    "name":"Walder Frey",
-    "shortname":"Walder_Frey",
-    "quote":"\"The 'Late Walder Frey', old Tully called me because I didn't get my men to the Trident in time for battle. He thought he was witty. Look at us now Tully! You're dead, your daughter's dead, your grandson's dead, your son spent his wedding night in a dungeon, and I'm Lord of Riverrun.\"",
-    "bio":"Walder Frey is the Lord of the Crossing and the head of House Frey, a vassal family of House Tully of the Riverlands. His house is noted for its overwhelming fertility and he has over one hundred descendents. He rules the The Twins and its surrounding lands, controlling the strategically important crossing of the Green Fork.  Over the years this great stone bridge and the castles that control it have made House Frey a fortune in crossing fees. He has been married seven times and is almost ninety years old when the series begins."
-  },
-  {
-    "name":"Viserys Targaryen",
-    "shortname":"Viserys_Targaryen",
-    "quote":"\"You don't want to wake the dragon, do you?\"",
-    "bio":"Viserys is the second son and heir of King Aerys II Targaryen, the former ruler of the Seven Kingdoms. During Robert's Rebellion, after Viserys's older brother Rhaegar was killed at the Battle of the Trident, his father sent Viserys and his pregnant mother Queen Rhaella to safety on Dragonstone island, location of their family's ancestral castle. King Aerys was soon afterwards killed during the Sack of King's Landing, and thus at the age of only five Viserys became the titular head of the Targaryen dynasty, though by this point the rebellion was officially lost. Not long afterwards, his mother died in childbirth, while the forces of Robert Baratheon closed in on the island. Before they could arrive, Viserys and his baby sister Daenerys were smuggled to safety in the Free Cities, across the Narrow Sea on the continent of Essos. Bereft of followers, Viserys spent the next 17 years travelling between the Free Cities trying to find new supporters for an attempt to retake the Iron Throne. At times, however, he was left literally begging for food and shelter, much less an army."
-  },
-  {
-    "name":"Joffrey Baratheon",
-    "shortname":"Joffrey_Baratheon",
-    "quote":"Bring me his head",
-    "bio":"Joffrey is believed to be the oldest son and heir of King Robert Baratheon and Queen Cersei Lannister, both of whom entered into a political marriage alliance after Robert took the throne by force from the Mad King Aerys II Targaryen. In reality, his father is Jaime Lannister, the queen's brother and the Lord Commander of the Kingsguard. He has a younger sister, Myrcella, and a younger brother, Tommen , both whom are also the product of Jaime and Cersei's incest."
-  },
-  {
-    "name":"Jorah Mormont",
-    "shortname":"Jorah_Mormont",
-    "quote":"\"Here We Stand\"",
-    "bio":"Jorah Mormont is the son of Jeor Mormont of House Mormont, the Lords of Bear Island and vassals of House Stark in the North. Jorah had a distinguished early career, and participating in the Siege of Pyke during the Greyjoy Rebellion, for which he was knighted by King Robert Baratheon. His father later voluntarily joined the Night's Watch, leaving Jorah as Lord of Bear Island and head of House Mormont."
-  },
-  {
-    "name":"Ramsay Bolton",
-    "shortname":" Ramsay_Bolton",
-    "quote":"\"Our Blades Are Sharp\"",
-    "bio":"Ramsay Snow, better known as \"The Bastard of Bolton\", is Lord Roose Bolton's bastard son and only living child following the death of Domeric Bolton, as well as the only possible heir to House Bolton. He stayed behind at the Dreadfort to rule as its castellan when his father left for the south to fight in the War of the Five Kings. Ramsay keeps a pack of dogs, which he employs for hunting."
-  }
-];
-        } );
-
-}() ); // end immediately invoked anonymous function
-
-
+    myApp.controller('MyController', ['$scope', '$http', function ($scope, $http) {
+            $http.get('js/data.json').success(function (data) {
+                $scope.characters = data;
+            });
+        }]);
+}()); // end immediately invoked anonymous function
