@@ -1,21 +1,7 @@
-/**
- * controllers.js 
- * @ Stephen O'Connor, March 2015
- * 
- * Dependencies: 
- * Angular 
- * 
- */
-
-// immediately invoked anonymous function
-( function () {
-	var myApp = angular.module('myApp', []);
-
-myApp.controller('MyController',         function MyController($scope) {
-            $scope.characters = [
+[
   {
     "name":" Theon Greyjoy",
-    "shortname":" Theon_Greyjoy",
+    "shortname":"Theon_Greyjoy",
     "quote":"\"We Do Not Sow.\"",
     "bio":"Theon is the youngest son of Lord Balon and Lady Alannys Greyjoy. Balon is the head of House Greyjoy and Lord of the Iron Islands. The Iron Islands are one of the constituent regions of the Seven Kingdoms and House Greyjoy is one of the Great Houses of the realm. House Greyjoy rule the region from their seat at Pyke and Balon also holds the title Lord Reaper of Pyke."
   },
@@ -67,9 +53,4 @@ myApp.controller('MyController',         function MyController($scope) {
     "quote":"\"Our Blades Are Sharp\"",
     "bio":"Ramsay Snow, better known as \"The Bastard of Bolton\", is Lord Roose Bolton's bastard son and only living child following the death of Domeric Bolton, as well as the only possible heir to House Bolton. He stayed behind at the Dreadfort to rule as its castellan when his father left for the south to fight in the War of the Five Kings. Ramsay keeps a pack of dogs, which he employs for hunting."
   }
-];
-        } );
-
-}() ); // end immediately invoked anonymous function
-
-
+]
