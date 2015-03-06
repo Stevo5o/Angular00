@@ -18,7 +18,7 @@
         </label>     
     </div>
     <ul class="characterlist">
-        <li class="character cf" ng-repeat="item in characters | filter: query | orderBy: characterOrder:direction">
+        <li ng-animate="'animate'" class="character cf" ng-repeat="item in characters | filter: query | orderBy: characterOrder:direction">
         <a href="#/details/{{characters.indexOf(item)}}">
             <img ng-src="images/{{item.shortname}}_tn.png" alt="Photo of {{item.name}}">               
             <div class="info">

@@ -9,7 +9,7 @@
 
 // immediately invoked anonymous function
 (function () {
-    var characterControllers = angular.module('characterControllers', []);
+    var characterControllers = angular.module('characterControllers', ['ngAnimate']);
 
     characterControllers.controller('ListController', ['$scope', '$http', function ($scope, $http) {
             $http.get('js/data.json').success(function (data) {
