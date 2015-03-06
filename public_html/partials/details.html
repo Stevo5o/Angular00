@@ -1,5 +1,7 @@
 <section class="characterinfo">
 	<div class="character cf" ng-model="characters">
+	<a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+	<a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
 		<h1>{{characters[whichItem].name}}</h1>
 		<div class="info">
 			<h3>{{characters[whichItem].quote}}</h3>
